@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国体育彩票 · 简明指南与访问提示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f6;
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page-wrap {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 头部短句 —— 开场引子 */
+        .hero-tag {
+            margin-top: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            color: #6b7280;
+            border-left: 3px solid #d71a2b;
+            padding-left: 1.1rem;
+        }
+
+        .hero-tag strong {
+            color: #1e1e1e;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin: 0.5rem 0 1.6rem 0;
+            color: #1e1e1e;
+        }
+
+        .intro-block {
+            font-size: 1.05rem;
+            margin-bottom: 2.4rem;
+            color: #2c2c2c;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.3rem;
+        }
+
+        /* 卡片式特点列表 — 最小化装饰 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 2.2rem 0 2.8rem 0;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            padding: 1.2rem 1.6rem;
+            border-radius: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.03);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 10px 20px rgba(0,0,0,0.04);
+        }
+
+        .feature-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.35rem;
+            color: #1e1e1e;
+        }
+
+        .feature-title::before {
+            content: "·";
+            font-weight: 700;
+            color: #d71a2b;
+            font-size: 1.6rem;
+            line-height: 0;
+        }
+
+        .feature-desc {
+            color: #444;
+            font-size: 0.98rem;
+            padding-left: 1.3rem;
+        }
+
+        /* 场景 + 提示合并段落 */
+        .scene-note {
+            background: #f2f1ee;
+            padding: 1.8rem 2rem;
+            border-radius: 20px;
+            margin: 2.4rem 0 2.8rem 0;
+        }
+
+        .scene-note h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em;
+            color: #1e1e1e;
+        }
+
+        .scene-note p {
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            color: #2c2c2c;
+        }
+
+        .scene-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scene-note strong {
+            color: #b91c1c;
+            font-weight: 500;
+        }
+
+        /* FAQ 摘要 — 简洁议题列表 */
+        .faq-mini {
+            margin: 2rem 0 2.4rem 0;
+            border-top: 1px solid #e5e3de;
+            padding-top: 1.8rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1e1e1e;
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .faq-q {
+            font-weight: 450;
+            color: #2a2a2a;
+            border-bottom: 1px dashed #d6d3cd;
+            padding-bottom: 0.6rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .faq-a a {
+            color: #b91c1c;
+            text-decoration: none;
+            border-bottom: 1px solid #d4a8a8;
+            transition: border-color 0.15s;
+        }
+
+        .faq-a a:hover {
+            border-bottom-color: #b91c1c;
+        }
+
+        /* 温和结尾 */
+        .gentle-outro {
+            margin: 3rem 0 3.6rem 0;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e3de;
+            font-size: 0.95rem;
+            color: #5a5a5a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.6rem;
+        }
+
+        .gentle-outro .small-note {
+            font-size: 0.85rem;
+            color: #7a7a7a;
+        }
+
+        .gentle-outro a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid #cbc8c0;
+            transition: border-color 0.15s;
+        }
+
+        .gentle-outro a:hover {
+            border-bottom-color: #b91c1c;
+            color: #b91c1c;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .hero-tag {
+                font-size: 0.98rem;
+                padding-left: 0.9rem;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .scene-note {
+                padding: 1.4rem 1.2rem;
+            }
+            .gentle-outro {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .page-wrap {
+                max-width: 720px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 开场短句 -->
+    <div class="hero-tag">
+        <strong>先看指南</strong> · 理性参与 · 了解规则
+    </div>
+
+    <h1>中国体育彩票<br>一份面向新手的简明指引</h1>
+
+    <!-- 承接段落 -->
+    <div class="intro-block">
+        <p>
+            如果你第一次接触 <a href="https://m-casl.com" style="color:#1e1e1e;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c0b7ab;">中国体育彩票</a>，或许会看到各种玩法和术语。实际上，它并不复杂——核心是选择赛事或数字组合，等待开奖结果。重要的是，在参与之前先理清基础规则与自己的预期。
+        </p>
+        <p>
+            以下从「玩法特点」「场景提示」「常见疑问」三个角度，帮你快速建立一个清晰的认知框架。所有信息均基于公开的彩票游戏规则，不包含任何夸大引导。
+        </p>
+    </div>
+
+    <!-- 特点列表（卡片） -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <div class="feature-title">游戏类型与逻辑</div>
+            <div class="feature-desc">
+                主要包括乐透型（如大乐透）、竞猜型（如竞彩足球、篮球）以及即开型。每种游戏的规则、中奖概率和开奖频率都不同，选择前建议先阅读官方玩法说明。
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-title">选号与投注</div>
+            <div class="feature-desc">
+                乐透型通常从多个号码中自选或机选；竞猜型则需要对比赛结果做出预测。投注金额从 2 元起，部分游戏设有倍投或复式选项。
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-title">开奖与兑奖</div>
+            <div class="feature-desc">
+                开奖时间固定，结果通过官方渠道发布。小额奖金可在销售网点兑取，超过一定金额需携带身份证至指定地点。纸质彩票是唯一兑奖凭证，请妥善保管。
+            </div>
+        </div>
+    </div>
+
+    <!-- 场景 + 提示（合并区块） -->
+    <div class="scene-note">
+        <h2>日常场景与访问提醒</h2>
+        <p>
+            不论是手机端还是电脑上浏览 <a href="https://m-casl.com" style="color:#b91c1c;text-decoration:none;border-bottom:1px solid #d4a8a8;">中国体育彩票</a>，你都会看到清晰的功能分区：查看开奖号码、了解最新玩法、查询附近网点。建议在投注前，先确认自己所在省份的销售时间与规则细节——不同地区可能略有差异。
+        </p>
+        <p>
+            <strong>提醒：</strong> 彩票是娱乐性质的随机游戏，并非投资手段。设定预算、量力而行，才能保持轻松的参与心态。如果一段时间没有中奖，不需要追加投入，每一次开奖都是独立事件。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要（简洁） -->
+    <div class="faq-mini">
+        <h3>几个常见问题 · 简短回答</h3>
+        <div class="faq-row">
+            <div class="faq-q">⚬ 可以在网上直接买彩票吗？</div>
+            <div class="faq-a">
+                根据现行规定，互联网售彩尚未全面开放。正规购买渠道是线下的体育彩票销售网点。你可以在 <a href="https://m-casl.com">中国体育彩票</a> 官网查询离你最近的网点地址和营业时间。
+            </div>
+
+            <div class="faq-q">⚬ 如何分辨真假彩票店？</div>
+            <div class="faq-a">
+                正规网点悬挂有“中国体育彩票”门头标识，并配有彩票终端机。店内应公示代销证。如果你对某个网点有疑问，可以通过官网或客服电话核实。
+            </div>
+
+            <div class="faq-q">⚬ 大乐透追加投注有什么意义？</div>
+            <div class="faq-a">
+                追加投注是指每注多付 1 元，中奖后（尤其是一、二等奖）可额外获得一定比例的浮动奖金。具体比例以当期规则为准，追加与否不影响基本中奖概率。
+            </div>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-outro">
+        <span>每次参与都是一次独立尝试，保持理性，享受过程。</span>
+        <span class="small-note">关于 <a href="https://m-casl.com">中国体育彩票</a> 的更多细节，可在官网慢慢浏览。</span>
+    </div>
+
+</div>
+</body>
+</html>
